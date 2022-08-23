@@ -94,8 +94,7 @@ def mars_facts():
 
 # Challenge
 def hemispheres(browser):
-    url = 'https://marshemispheres.com/'
-
+    url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(url)
 
 # 2. Create a list to hold the images and titles.
@@ -105,12 +104,12 @@ def hemispheres(browser):
     links = browser.find_by_css('a.product-item h3')
     for index in range(len(links)):
         
-        browser.find_by_css('a.product-item h3')[index].click()
+        browser.find_by_css("a.product-item h3")[index].click()
         hemisphere_data = scrape_hemisphere(browser.html)
         hemisphere_image_urls.append(hemisphere_data)
     
         browser.back()
-
+   
 # 4. Print the list that holds the dictionary of each image url and title.
     return hemisphere_image_urls
 
@@ -122,11 +121,11 @@ def scrape_hemisphere(html_text):
     except AttributeError:
         title_element = None
         sample_element = None
-    hemisphere_dictionary = {
+    hemispheres_dictionary = {
         "title": title_element,
         "img_url": sample_element
     }
-    return hemisphere_dictionary
+    return hemispheres_dictionary
 
 if __name__=="__main__":
     print(scrape_all())
