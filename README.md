@@ -49,3 +49,4 @@ Scrape the NASA Mars News Site and collect the latest News Title and Paragraph T
   * The Back-ground of the page is cahnged to teal color.
   * The back-ground color of the paragraphs are changed to differnt color.
   * The table back-ground and title back-ground are change to different color. 
+<img width="1309" alt="Screen Shot 2022-08-24 at 11 15 49 AM" src="https://user-images.githubusercontent.com/107584361/186495356-ce93c805-c26f-4fa7-b946-b1fb6c53ef3c.png">
